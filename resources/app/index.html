@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>snake to camel</title>
+</head>
+<body>
+  <p>snake to camel</p>
+  <form>
+    <textarea rows="32" cols="40" id="snake" onKeyUp="toCamel()"></textarea>
+    <textarea rows="32" cols="40" id="camel"></textarea>
+  </form>
+  <script type="text/javascript">
+    function toCamel() {
+      document.getElementById("camel").value=document.getElementById("snake").value.replace(/([A-Z])/g,
+            function(s) {
+                return '_' + s.charAt(0).toLowerCase();
+            }).toUpperCase();
+    }
+  </script>
+</body>
+</html>
